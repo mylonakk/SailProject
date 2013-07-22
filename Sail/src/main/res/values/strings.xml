@@ -4,5 +4,7 @@
     <string name="app_name">Sail</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="hint">Insert your message...</string>
+    <string name="update">Send</string>
 
 </resources>
