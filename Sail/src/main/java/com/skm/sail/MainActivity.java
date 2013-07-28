@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.net.DatagramPacket;
@@ -28,6 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	InetAddress hostAddress;// server's address
 	DatagramPacket p;// packet used to send info
 	byte[] rxbuffer;
+	ProgressBar progressBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	@Override
 	public void onClick(View view) {
 		String status = editText.getText().toString();
+		textView.setText(null);
+		progressBar = (ProgressBar) findViewById(R.id.progressBar);
+		progressBar.setVisibility(View.VISIBLE);
+
+		//textView.setText("Waiting for response...");
 		try {
 			new SendToServer().execute(status);    // status goes in doInBackground()
 		} catch (Exception e) {
@@ -90,6 +97,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		@Override
 		protected void onPostExecute(String s) {
 			super.onPostExecute(s);
+			progressBar.setVisibility(View.INVISIBLE);
 			textView.setText(s);
 		}
 	}

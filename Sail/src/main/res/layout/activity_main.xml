@@ -36,9 +36,20 @@
             android:id="@+id/textView"
             android:gravity="center_horizontal"
             android:layout_below="@id/editText"
-            android:layout_alignLeft="@+id/editText"
-            />
+            android:layout_alignLeft="@+id/editText">
 
+
+
+    </TextView>
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
 
 
 </RelativeLayout>
