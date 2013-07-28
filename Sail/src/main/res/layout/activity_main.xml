@@ -9,15 +9,24 @@
                 tools:context=".MainActivity">
 
 
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:id="@+id/Button"
+            android:layout_alignParentTop="true"
+            />
+
+
     <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText"
             android:hint="@string/hint"
             android:textAlignment="textStart"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            />
+            android:layout_below="@id/Button"
+            android:layout_centerHorizontal="true"/>
 
     <TextView
             android:layout_width="fill_parent"
@@ -25,19 +34,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textAlignment="center"
             android:id="@+id/textView"
-            android:layout_above="@+id/button"
             android:gravity="center"
-            android:layout_below="@+id/editText"
+            android:layout_below="@id/editText"
             android:layout_alignLeft="@+id/editText"/>
 
-    <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/update"
-            android:id="@+id/button"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

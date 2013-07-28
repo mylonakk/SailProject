@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		editText = (EditText) findViewById(R.id.editText);
 		textView = (TextView) findViewById(R.id.textView);
-		updateButton = (Button) findViewById(R.id.button);
+		updateButton = (Button) findViewById(R.id.Button);
 		updateButton.setOnClickListener(this);
 	}
 
