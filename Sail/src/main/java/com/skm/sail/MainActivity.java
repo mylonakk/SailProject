@@ -90,7 +90,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			} catch (Exception e) {
 				Log.e(TAG, e.toString());
 				e.printStackTrace();
-				return "Failed to Post";
+				return "Failed send message...";
 			}
 		}
 
