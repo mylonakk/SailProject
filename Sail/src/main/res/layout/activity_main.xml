@@ -34,9 +34,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textAlignment="center"
             android:id="@+id/textView"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:layout_below="@id/editText"
-            android:layout_alignLeft="@+id/editText"/>
+            android:layout_alignLeft="@+id/editText"
+            />
 
 
 
